@@ -255,7 +255,7 @@ aside .title-container img {
   grid-template-columns: repeat(auto-fill, 240px);
   gap: 26px;
   place-content: center;
-  margin-top: 20px;
+  margin: 20px 12px 0;
 }
 .product-card {
   width: 240px;
