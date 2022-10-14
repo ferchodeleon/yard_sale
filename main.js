@@ -1,5 +1,8 @@
+const productos = ''
+
 const navEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
+const modal = document.querySelector('.container-desktop-menu');
 
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -15,6 +18,8 @@ navEmail.addEventListener("click", toggleDesktopMenu);
 
 function toggleDesktopMenu() {
   desktopMenu.classList.toggle("inactive");
+  modal.classList.toggle('modal');
+  closeProductDetailAside();
 }
 
 // Hide menu
@@ -42,6 +47,7 @@ function toggleShoppingCard() {
   if (isMobileMenuOpen) {
     mobileMenu.classList.add("inactive");
   }
+  modal.classList.toggle("modal");
 
   const isProductDetailOpen =
     !productDetailContainer.classList.contains("inactive");
@@ -58,20 +64,20 @@ productList.push({
   price: 120,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-});
-productList.push({
+},
+{
   name: "TV",
   price: 120,
   image:
     "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-});
-productList.push({
+},
+{
   name: "MacBook Pro",
   price: 120,
   image:
     "https://images.pexels.com/photos/249538/pexels-photo-249538.jpeg?auto=compress&cs=tinysrgb&w=600",
-});
-productList.push({
+},
+{
   name: "Iphone",
   price: 120,
   image:
